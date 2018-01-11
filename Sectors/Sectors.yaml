@@ -31,7 +31,7 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Merkur Orbit
-    - SpaceEmptyRoggery
+    - MerkurSpaceEmpty
     - ''
   - - 0, 0, 0
     - Merkur
@@ -51,11 +51,11 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Venus Orbit
-    - SpaceAsteroidsFewSkillon
+    - VenusSpaceEmpty
     - ''
   - - 0, 0, 0
     - Venus
-    - NewBarren
+    - VenusNewBarren
     - ''
   Allow: []
   Deny: []
@@ -71,7 +71,7 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Terra Orbit
-    - SpaceEmptyRoggery
+    - TerraSpaceEmpty
     - ''
   - - 0, 0, 0
     - Terra
@@ -79,7 +79,7 @@ Sectors:
     - Human:1
   - - -6500, 5000, 6500
     - Mond
-    - NewMoon2
+    -TerraNewMoon2
     - ''
   Allow: []
   Deny: []
@@ -95,15 +95,19 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Mars Orbit
-    - SpaceAsteroidFieldOmicron
+    - MarsSpaceAsteroidFew
     - ''
   - - 0, 0, 0
     - Mars
-    - NewDesert
+    - MarsNewDesert
     - Explorer:2
   - - 2000, 5000, -9000
-    - Omicron Moon
-    - NewMoon
+    - Deimos
+    - DeimosNewMoon
+    - ''
+  - - 2000, 5000, -9000
+    - Phobos
+    - PhobosNewMoon
     - ''
   Allow: []
   Deny: []
@@ -115,10 +119,11 @@ Sectors:
   - 334
   Color: 1, 0.5, 0
   Icon: Star
+  OrbitLine: true
   Playfields:
   - - 0, 0, 0
     - Asteroid Trading
-    - SpaceTradingStation
+    - AGSpaceTradingStation
     - ''
   Allow: []
   Deny: []
@@ -133,7 +138,7 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Asteroid Outpost
-    - SpaceAlienStation
+    - AGSpaceAlienStation
     - ''
   Allow: []
   Deny: []
@@ -149,11 +154,11 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Asteroid Pallas
-    - SpaceAsteroidFieldRingAitis
+    - AGSpaceAsteroidFieldRing
     - ''
   - - 0, 0, 0
     - Pallas
-    - NewMoon1
+    - PallasNewMoon1
     - ''
   Allow: []
   Deny: []
@@ -169,11 +174,11 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Asteroid Ceres
-    - SpaceAsteroidFieldRingAitis
+    - AGSpaceAsteroidFieldRing
     - ''
   - - 0, 0, 0
     - Ceres
-    - NewMoon1
+    - CeresNewMoon1
     - ''
   Allow: []
   Deny: []
@@ -189,7 +194,7 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Asteroid Field
-    - SpaceAsteroidField
+    - AGSpaceAsteroidField
     - ''
   Allow: []
   Deny: []
@@ -208,19 +213,19 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Jupiter Orbit
-    - SpaceEmptyJupiter
+    - JupiterSpaceEmpty
     - ''
   - - 0, 0, 0
     - Jupiter
-    - 
+    - JupiterMoon
     - ''
   - - -7000, 0, 1000
     - Io
-    - NewAlien
+    - IONewAlien
     - ''
   - - 6000, -4000, 7000
     - Ganimed
-    - NewMoon2
+    - GanimedNewMoon2
     - ''
   - - 2000, 4000, -7000
     - Europa
@@ -241,11 +246,11 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Saturn Orbit
-    - SpaceRingSaturn
+    - SaturnSpaceRing
     - ''
   - - 0, 0, 0 
     - Saturn
-    - Moon
+    - SaturnMoon
     - ''
   - - 5000, 5000, -500 
     - Titan
@@ -278,7 +283,7 @@ Sectors:
   Allow: []
   Deny: []
 #===================================================
-#  Neptun
+#  Neptun , Desert, no O2, 1.2 g
 - Coordinates:
   - -988
   - 309
