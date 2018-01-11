@@ -35,7 +35,7 @@ Sectors:
     - ''
   - - 0, 0, 0
     - Merkur
-    - NewLava
+    - MerkurNewLava
     - ''
   Allow: []
   Deny: []
