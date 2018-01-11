@@ -1,4 +1,11 @@
+#===================================================
+#   Simulation des Sonnensystems mit den Planeten
+#   und den wichtigsten Monen
+#   Der 3te Planet ist nicht besonders originalgetreu.
+#===================================================
 Sectors:
+#===================================================
+#  Sonne
 - Coordinates:
   - 0
   - 0
@@ -12,6 +19,8 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+#===================================================
+#  Merkur
 - Coordinates:
   - 44
   - -9
@@ -30,6 +39,8 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+#===================================================
+#  Venus
 - Coordinates:
   - 129
   - -34
@@ -48,6 +59,8 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+#===================================================
+#  Terra
 - Coordinates:
   - 221
   - -58
@@ -70,6 +83,8 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+#===================================================
+#  Mars
 - Coordinates:
   - 176
   - -55
@@ -92,6 +107,8 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+#===================================================
+#  Asteroidenguertel
 - Coordinates:
   - -209
   - 21
@@ -105,6 +122,8 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+#===================================================
+#  Asteroidenguertel
 - Coordinates:
   - -171
   - -45
@@ -118,6 +137,8 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+#===================================================
+#  Asteroidenguertel
 - Coordinates:
   - -309
   - -24
@@ -136,6 +157,8 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+#===================================================
+#  Ceres
 - Coordinates:
   - 57
   - -65
@@ -154,6 +177,8 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+#===================================================
+#  Asteroidengertel
 - Coordinates:
   - -317
   - 16
@@ -168,6 +193,8 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+#===================================================
+#  Jupiter
 - Coordinates:
   - -708
   - 211
@@ -194,6 +221,8 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+#===================================================
+#  Saturn
 - Coordinates:
   - -533
   - 133
@@ -212,6 +241,8 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+#===================================================
+#  Uranus
 - Coordinates:
   - -909
   - 257
@@ -230,6 +261,8 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+#===================================================
+#  Neptun
 - Coordinates:
   - -988
   - 309
@@ -255,6 +288,8 @@ Sectors:
     - ''
   Allow: [Wega 1 Orbit]
   Deny: []
+#===================================================
+#  Wega 1
 - Coordinates:
   - -944
   - -756
@@ -277,6 +312,8 @@ Sectors:
     - ''
   Allow: [Neptun Orbit]
   Deny: []
+#===================================================
+#  Wega 2
 - Coordinates:
   - -808
   - -774
