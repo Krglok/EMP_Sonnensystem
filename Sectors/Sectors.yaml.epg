@@ -1,0 +1,297 @@
+Sectors:
+- Coordinates:
+  - 0
+  - 0
+  - 0
+  Color: 0, 0, 0
+  Icon: No
+  Playfields:
+  - - 0, 0, 0
+    - Sun
+    - Sun
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - 44
+  - -9
+  - 107
+  Color: 0.3, 0.06, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Merkur Orbit
+    - SpaceEmptyRoggery
+    - ''
+  - - 0, 0, 0
+    - Merkur
+    - NewLava
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - 129
+  - -34
+  - 104
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Venus Orbit
+    - SpaceAsteroidsFewSkillon
+    - ''
+  - - 0, 0, 0
+    - Venus
+    - NewBarren
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - 221
+  - -58
+  - -2
+  Color: 0.04, 0.3, 0.37
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Terra Orbit
+    - ''
+    - ''
+  - - 0, 0, 0
+    - Terra
+    - NewTemperate
+    - Human:1
+  - - -6500, 5000, 6500
+    - Mond
+    - NewMoon2
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - 176
+  - -55
+  - -142
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Mars Orbit
+    - SpaceAsteroidFieldOmicron
+    - ''
+  - - 0, 0, 0
+    - Mars
+    - NewDesert
+    - Explorer:2
+  - - 2000, 5000, -9000
+    - Omicron Moon
+    - NewMoon
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - -209
+  - 21
+  - 334
+  Color: 1, 0.5, 0
+  Icon: Star
+  Playfields:
+  - - 0, 0, 0
+    - Asteroid Trading
+    - SpaceTradingStation
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - -171
+  - -45
+  - -270
+  Color: 0.5, 0.5, 0.5
+  Icon: Kite
+  Playfields:
+  - - 0, 0, 0
+    - Asteroid Outpost
+    - SpaceAlienStation
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - -309
+  - -24
+  - -64
+  Color: 0.3, 0.06, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Asteroid Pallas
+    - SpaceAsteroidFieldRingAitis
+    - ''
+  - - 0, 0, 0
+    - Pallas
+    - NewLava2
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - 57
+  - -65
+  - -355
+  Color: 0.3, 0.06, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Asteroid Ceres
+    - SpaceAsteroidFieldRingAitis
+    - ''
+  - - 0, 0, 0
+    - Ceres
+    - NewLava2
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - -317
+  - 16
+  - 152
+  Color: 0.5, 0.5, 0.5
+  Icon: Rhombus
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Asteroid Field
+    - SpaceAsteroidField
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - -708
+  - 211
+  - 41
+  Color: 0.15, 0.3, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Jupiter Orbit
+    - SpaceAsteroidsMasperon
+    - ''
+  - - -7000, 0, 1000
+    - Io
+    - NewAlien
+    - ''
+  - - 6000, -4000, 7000
+    - Ganimed
+    - NewMoon2
+    - ''
+  - - 2000, 4000, -7000
+    - Europa
+    - EuropaSnow
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - -533
+  - 133
+  - 169
+  Color: 0.7, 0.7, 0.7
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Saturn Orbit
+    - SpaceEmptyNingues
+    - ''
+  - - 0, 0, 0
+    - Titan
+    - NewSnow
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - -909
+  - 257
+  - -98
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Uranus Orbit
+    - SpaceAsteroidsFewZeyhines
+    - ''
+  - - 0, 0, 0
+    - Uranus
+    - NewDesert2
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - -988
+  - 309
+  - -329
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  Playfields:
+  - - 0, 0, 0
+    - Neptun Orbit
+    - SpaceEmptyRoggery
+    - ''
+  - - 0, 0, 0
+    - Neptun
+    - NeptunDesert3
+    - ''
+  - - 6000, -4000, 7000
+    - Triton
+    - NewMoon2
+    - ''
+  - - 6000, 4000, -7000
+    - Triton
+    - NewMoon2
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - -944
+  - -756
+  - -856
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Wega 1 Orbit
+    - SpaceAsteroidFieldRingTallodar
+    - ''
+  - - 0, 0, 0
+    - Tallodar
+    - NewTemperate3
+    - Human:1
+  - - -2000, -5000, 9000
+    - Tallodar Moon
+    - NewMoon
+    - ''
+  Allow: []
+  Deny: []
+- Coordinates:
+  - -808
+  - -774
+  - -845
+  Color: 0.04, 0.3, 0.37
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Wega 2 Orbit
+    - SpaceAsteroidsOscutune
+    - ''
+  - - 0, 0, 0
+    - Oscutune
+    - NewOcean
+    - ''
+  Allow: []
+  Deny: []
