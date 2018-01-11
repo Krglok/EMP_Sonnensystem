@@ -153,7 +153,7 @@ Sectors:
     - ''
   - - 0, 0, 0
     - Pallas
-    - NewLava2
+    - NewMoon1
     - ''
   Allow: []
   Deny: []
@@ -173,7 +173,7 @@ Sectors:
     - ''
   - - 0, 0, 0
     - Ceres
-    - NewLava2
+    - NewMoon1
     - ''
   Allow: []
   Deny: []
@@ -194,7 +194,10 @@ Sectors:
   Allow: []
   Deny: []
 #===================================================
-#  Jupiter , 
+#  Jupiter , Planet no CV, SV
+#          , dichtegiftige Atmosphaere
+#          , 2.5 g
+#  3 Monde
 - Coordinates:
   - -708
   - 211
@@ -205,7 +208,11 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Jupiter Orbit
-    - SpaceAsteroidsMasperon
+    - SpaceEmptyJupiter
+    - ''
+  - - 0, 0, 0
+    - Jupiter
+    - 
     - ''
   - - -7000, 0, 1000
     - Io
@@ -222,7 +229,8 @@ Sectors:
   Allow: []
   Deny: []
 #===================================================
-#  Saturn
+#  Saturn no CV,SV, dichtegiftige Atmosphaere, 1.5g
+#  1 Mond
 - Coordinates:
   - -533
   - 133
@@ -233,11 +241,19 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Saturn Orbit
-    - SpaceEmptyNingues
+    - SpaceRingSaturn
     - ''
-  - - 0, 0, 0
+  - - 0, 0, 0 
+    - Saturn
+    - Moon
+    - ''
+  - - 5000, 5000, -500 
     - Titan
-    - NewSnow
+    - TitanNewSnow
+    - ''
+  - - 5000, 500, 5000 
+    - Rhea
+    - RhaeMoon
     - ''
   Allow: []
   Deny: []
@@ -253,11 +269,11 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Uranus Orbit
-    - SpaceAsteroidsFewZeyhines
+    - UranusSpaceAsteroidsFew
     - ''
   - - 0, 0, 0
     - Uranus
-    - NewDesert2
+    - UranusNewDesert2
     - ''
   Allow: []
   Deny: []
@@ -272,7 +288,7 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Neptun Orbit
-    - SpaceEmptyRoggery
+    - NeptunSpaceEmpty
     - ''
   - - 0, 0, 0
     - Neptun
@@ -289,7 +305,7 @@ Sectors:
   Allow: [Wega 1 Orbit]
   Deny: []
 #===================================================
-#  Wega 1
+#  Wega 1  kleiner Temperate, O2, 0.6 g
 - Coordinates:
   - -944
   - -756
@@ -300,15 +316,15 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Wega 1 Orbit
-    - SpaceAsteroidFieldRingTallodar
+    - Weag1SpaceAsteroidFieldRing
     - ''
   - - 0, 0, 0
-    - Tallodar
-    - NewTemperate3
-    - Human:1
+    - Wega 1
+    - Wega1NewTemperate3
+    - Alien:1
   - - -2000, -5000, 9000
-    - Tallodar Moon
-    - NewMoon
+    - Wega 1 Moon
+    - Wega1NewMoon
     - ''
   Allow: [Neptun Orbit]
   Deny: []
@@ -324,11 +340,15 @@ Sectors:
   Playfields:
   - - 0, 0, 0
     - Wega 2 Orbit
-    - SpaceAsteroidsOscutune
+    - Wega2SpaceAsteroids
     - ''
   - - 0, 0, 0
-    - Oscutune
-    - NewOcean
+    - Wega 2
+    - Wega2NewDesert
+    - ''
+  - - -2000, -5000, 9000
+    - Wega 2 Moon
+    - Wega2NewMoon
     - ''
   Allow: []
   Deny: []
