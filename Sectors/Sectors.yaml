@@ -79,8 +79,8 @@ Sectors:
     - Human:1
   - - -6500, 5000, 6500
     - Mond
-    -TerraNewMoon2
-    - ''
+    -TerraNewTemperate_V2
+    - ''  #Human1
   Allow: []
   Deny: []
 #===================================================
