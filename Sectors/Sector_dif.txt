@@ -1,0 +1,246 @@
+#===================================================
+#  Asteroidenguertel
+- Coordinates:
+  - -209
+  - 21
+  - 334
+  Color: 1, 0.5, 0
+  Icon: Star
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Asteroid Trading
+    - AGSpaceTradingStation
+    - ''
+  Allow: []
+  Deny: []
+#===================================================
+#  Asteroidenguertel
+- Coordinates:
+  - -171
+  - -45
+  - -270
+  Color: 0.5, 0.5, 0.5
+  Icon: Kite
+  Playfields:
+  - - 0, 0, 0
+    - Asteroid Outpost
+    - AGSpaceAlienStation
+    - ''
+  Allow: []
+  Deny: []
+#===================================================
+#  Asteroid Pallas, Minimond mit Asteroidenguertel
+- Coordinates:
+  - -309
+  - -24
+  - -64
+  Color: 0.3, 0.06, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Asteroid Pallas
+    - AGSpaceAsteroidFieldRing
+    - ''
+  - - 0, 0, 0
+    - Pallas
+    - PallasNewMoon1
+    - ''
+  Allow: []
+  Deny: []
+#===================================================
+#  Asteroid Ceres , Minimond , Asteroidenhaufen
+- Coordinates:
+  - 57
+  - -65
+  - -355
+  Color: 0.3, 0.06, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Asteroid Ceres
+    - AGSpaceAsteroidFieldRing
+    - ''
+  - - 0, 0, 0
+    - Ceres
+    - CeresNewMoon1
+    - ''
+  Allow: []
+  Deny: []
+#===================================================
+#  Asteroidenguertel
+- Coordinates:
+  - -317
+  - 16
+  - 152
+  Color: 0.5, 0.5, 0.5
+  Icon: Rhombus
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Asteroid Field
+    - AGSpaceAsteroidField
+    - ''
+  Allow: []
+  Deny: []
+#===================================================
+#  Jupiter , Planet no CV, SV
+#          , dichtegiftige Atmosphaere
+#          , 2.5 g
+#  3 Monde
+- Coordinates:
+  - -708
+  - 211
+  - 41
+  Color: 0.15, 0.3, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Jupiter Orbit
+    - JupiterSpaceEmpty
+    - ''
+  - - 0, 0, 0
+    - Jupiter
+    - JupiterNewMoon2
+    - ''
+  - - -7000, 0, 1000
+    - Io
+    - IONewAlien
+    - ''
+  - - 6000, -4000, 7000
+    - Ganimed
+    - GanimedNewMoon2
+    - ''
+  - - 2000, 4000, -7000
+    - Europa
+    - EuropaSnow
+    - ''
+  Allow: []
+  Deny: []
+#===================================================
+#  Saturn no CV,SV, dichtegiftige Atmosphaere, 1.5g
+#  1 Mond
+- Coordinates:
+  - -533
+  - 133
+  - 169
+  Color: 0.7, 0.7, 0.7
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Saturn Orbit
+    - SaturnSpaceRing
+    - ''
+  - - 0, 0, 0 
+    - Saturn
+    - SaturnMoon
+    - ''
+  - - 5000, 5000, -500 
+    - Titan
+    - TitanNewSnow
+    - ''
+  - - 5000, 500, 5000 
+    - Rhea
+    - RhaeMoon
+    - ''
+  Allow: []
+  Deny: []
+#===================================================
+#  Uranus
+- Coordinates:
+  - -909
+  - 257
+  - -98
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Uranus Orbit
+    - UranusSpaceAsteroidsFew
+    - ''
+  - - 0, 0, 0
+    - Uranus
+    - UranusNewDesert2
+    - ''
+  Allow: []
+  Deny: []
+#===================================================
+#  Neptun , Desert, no O2, 1.2 g
+- Coordinates:
+  - -988
+  - 309
+  - -329
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  Playfields:
+  - - 0, 0, 0
+    - Neptun Orbit
+    - NeptunSpaceEmpty
+    - ''
+  - - 0, 0, 0
+    - Neptun
+    - NeptunDesert3
+    - ''
+  - - 6000, -4000, 7000
+    - Triton
+    - NewMoon2
+    - ''
+  - - 6000, 4000, -7000
+    - Nereid
+    - NewMoon2
+    - ''
+  Allow: [Wega 1 Orbit]
+  Deny: []
+#===================================================
+#  Wega 1  kleiner Temperate, O2, 0.6 g
+- Coordinates:
+  - -944
+  - -756
+  - -856
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Wega 1 Orbit
+    - Weag1SpaceAsteroidFieldRing
+    - ''
+  - - 0, 0, 0
+    - Wega 1
+    - Wega1NewTemperate3
+    - Alien:1
+  - - -2000, -5000, 9000
+    - Wega 1 Moon
+    - Wega1NewMoon
+    - ''
+  Allow: [Neptun Orbit]
+  Deny: []
+#===================================================
+#  Wega 2
+- Coordinates:
+  - -808
+  - -774
+  - -845
+  Color: 0.04, 0.3, 0.37
+  Icon: Circle
+  OrbitLine: true
+  Playfields:
+  - - 0, 0, 0
+    - Wega 2 Orbit
+    - Wega2SpaceAsteroids
+    - ''
+  - - 0, 0, 0
+    - Wega 2
+    - Wega2NewDesert
+    - ''
+  - - -2000, -5000, 9000
+    - Wega 2 Moon
+    - Wega2NewMoon
+    - ''
+  Allow: []
+  Deny: []

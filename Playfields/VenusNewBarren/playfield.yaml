@@ -1,5 +1,6 @@
 ---
-# Playfield Configuration  Venus
+#---------------------------------------------------------
+# Venus   
 # IMPORTANT: YAML files use spaces as indentation. Please don't use TABs - tab indentation is forbidden: http://yaml.org/faq.html
 # For more detailed explanations of the different parameters, see examples in Empyrion\Content\Playfields\ExamplePlanet and ExampleSpace
 # Please do not use long comments here because in a multiplayer game the yaml file has to be sent from server to client 
@@ -7,7 +8,7 @@
 # Playfield Characteristics
 RealRadius: 1303.797294             
 ScaledRadius: 1300                  
-Gravity: -7.86                      
+Gravity: -4.86                      
 AtmosphereDensity: 1.377            
 AtmosphereO2: 0.05                  
 AtmosphereBreathable: False         
@@ -20,15 +21,17 @@ DayLength: 24
 PlanetType: Barren               
 Moons: 0                         
 PvP: True                        
-#Seed: 123456                    
-#UseFixed: False				
+Seed: 123456                    
+#UseFixed: False 
 
 # Playfield difficulty (has impact on experience gains)
 Difficulty: 3                   
 
 # Planet or Space
 PlayfieldType: Moon           
-Description: "Venus is a barren planet with unforgiving conditions."                  
+Description: "Venus ist der 2te Planet des Sonnensystems.\n
+              Ein heisser, trockner Planet ohne Wasser , ohne Leben. Eine giftige  Atmosphaere\n
+             "
 
 # Sun                           
 SunFlare: EnvironmentalEffects/SunFlareBlue
@@ -50,11 +53,11 @@ NightLightColor: "0.5, 0.78, 0.16"
 DayShadowStrength: 0.95              
 
 # Fog
-AtmosphereFog: 0.3                  8
+AtmosphereFog: 0.60
 FogColor: "0.6, 1, 0.1"
-FogCloudIntensity: 1.0         
-FogIntensity: 0.6                    
-FogStartDistance: 600                
+FogCloudIntensity: 0.7
+FogIntensity: 0.5                    
+FogStartDistance: 300
 GroundFogIntensity: 0.45             
 GroundFogHeight: 300
 
@@ -165,7 +168,6 @@ Biome:
                - [ CoralStone01-03, 10]
                - [ CoralStone01-05, 10]
                - [ CrystalsPyramidBlue, 10]
-               - [ SkeletonWhalePart, 10]
 # ===================================================
 # Main biome: flat
    - Altitude: [ 43, 70 ]
@@ -288,18 +290,6 @@ POIs:
             - Key: Music
               Value: DarkSoundscape3       
 
-        - GroupName: Artifacts
-          CountMinMax: [ 1, 1 ]         
-          DroneProb: 1.0
-          DronesMinMax: [ 2, 2 ]
-          ReserveCount: 4
-          TroopTransport: False
-          SpawnPOIAvoid: [TS_Skillon]  
-          POIDistance: 800        
-          Properties: 
-            - Key: Music
-              Value: DarkSoundscape3       
-
         - GroupName: CrashedShip      # Do not use regeneration with burried POIs
           CountMinMax: [ 1, 2 ]
           DroneProb: 0.8
@@ -310,6 +300,23 @@ POIs:
           Properties: 
             - Key: MapMarker 
               Value: Neutral    
+
+        - GroupName: DroneBaseAkua
+          DroneBaseSetup: Starter Drone Base
+          CountMinMax: [2, 4]
+          DroneProb: 1
+          DronesMinMax: [5, 7]
+          ReserveCount: 5
+          TroopTransport: False
+          InitPower: True
+          SpawnPOINear: []
+          SpawnPOIAvoid: [DroneBaseAkua]
+          SpawnResource: []
+          Properties:
+            - Key: Music
+              Value: alien2
+            - Key: RegenAfter
+              Value: 720
 
     FixedPlayerStart:
         - Mode: Debug
@@ -342,30 +349,6 @@ DroneBaseSetup:
               - Name: DroneLargeSlow02Cannon
                 Amount: 200
                 Extra: 0
-
-              - Name: DroneLargeAttackBase     # Base attack drones
-                Amount: Infinite
-                Extra: 1       
-
-              - Name: EnemyDroneV2Minigun      # Base attack drones
-                Amount: Infinite
-                Extra: 1                      
-
-              - Name: DroneTroopsTransport
-                Amount: Infinite
-                Extra: 2
-
-              - Name: ZiraxRocket
-                Amount: 500
-                Extra: 3
-
-              - Name: ZiraxLaser
-                Amount: 500
-                Extra: 3
-
-              - Name: Crawler
-                Amount: 250
-                Extra: 3
 
           PlanetVesselBase:
               Name: PlanetVesselBaseSetup

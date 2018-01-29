@@ -1,30 +1,38 @@
+---
 #===================================================
 #   Simulation des Sonnensystems mit den Planeten
 #   und den wichtigsten Monden
 #   Der 3te Planet ist nicht besonders originalgetreu.
+#   Die Umlaufbahnebene ist x, z.
+Die Entfernung sind 3x  gemacht da die inneren PLaneten unter 1 AE in der Umlaufbahn haben.
 #===================================================
-Sectors:
-#===================================================
-#  Sonne
-- Coordinates:
-  - 0
-  - 0
-  - 0
+# Sectors MP
+# IMPORTANT: YAML files use spaces as indentation. Please don't use TABs: http://yaml.org/faq.html
+# Default starter planets on a Dedicated Server are Akua, Omicron, Ningues and Masperon. 'Origin:Number' behind playfield template sets starter planet [ "0, 0, 0", Akua, Temperate, 'Human:1' ]
+# Allow and Deny lists: If “Allow” is set, sectors that are given in list are accessible in addition to those that are close enough. If “Deny” is set, sectors that are given in list are not accessible.
+# Available Icons: Circle, Kite, Rhombus, Pentagon, Square, Star, Triangle, Hexagon
+
+- Coordinates: [0, 30, 0]
   Color: 0, 0, 0
-  Icon: No
   Playfields:
-  - - 0, 0, 0
-    - Sun
-    - Sun
-    - ''
-  Allow: []
-  Deny: []
+  - ['0, 0, 0', Sun, Sun]
+#===================================================
+#   Startplanet ausserhalb des Szenarios Erde
+- Coordinates: [155, -100, -164]
+  Color: 0.37, 0.33, 0.04
+  Icon: Circle
+  OrbitLine: True
+  Deny: [Masperon Orbit]
+  Playfields:
+  - ['0, 0, 0', Tallodar Orbit, TallodarSpaceAsteroidFieldRing]
+  - ['0, 0, 0', Tallodar, TallodarNewTemperate3, 'Human:1'] #OK5
+  - ['-2000, -5000, 9000', Tallodar Moon, TallodarNewMoon] 
 #===================================================
 #  Merkur , Lava
 - Coordinates:
-  - 44
-  - -9
-  - 107
+  - 0
+  - 0
+  - 1
   Color: 0.3, 0.06, 0.04
   Icon: Circle
   OrbitLine: true
@@ -42,9 +50,9 @@ Sectors:
 #===================================================
 #  Venus , giftige Wolken kein O2, kein Leben
 - Coordinates:
-  - 129
-  - -34
-  - 104
+  - 2
+  - 0
+  - 0
   Color: 0.37, 0.33, 0.04
   Icon: Circle
   OrbitLine: true
@@ -59,12 +67,13 @@ Sectors:
     - ''
   Allow: []
   Deny: []
+##-----------------------------------------------------
 #===================================================
 #  Terra , Temperate 
 - Coordinates:
-  - 221
-  - -58
-  - -2
+  - 0
+  - 0
+  - -3
   Color: 0.04, 0.3, 0.37
   Icon: Circle
   OrbitLine: true
@@ -75,285 +84,168 @@ Sectors:
     - ''
   - - 0, 0, 0
     - Terra
-    - TerraNewTemperate
-    - Human:1
-  - - -6500, 5000, 6500
+    - TerraNewTemperate_V2
+    - 'Explorer:1'
+  - - -6500, 100, 6500
     - Mond
-    -TerraNewTemperate_V2
+    - TerraMoon
     - ''  #Human1
   Allow: []
   Deny: []
+
 #===================================================
 #  Mars , Barren
 - Coordinates:
-  - 176
-  - -55
-  - -142
+  - -4
+  - 0
+  - 0
   Color: 0.37, 0.33, 0.04
   Icon: Circle
   OrbitLine: true
   Playfields:
   - - 0, 0, 0
     - Mars Orbit
-    - MarsSpaceAsteroidFew
+    - MarsSpaceEmpty
     - ''
   - - 0, 0, 0
     - Mars
     - MarsNewDesert
     - Explorer:2
-  - - 2000, 5000, -9000
+  - - 7500, 0, 7500
     - Deimos
     - DeimosNewMoon
     - ''
-  - - 2000, 5000, -9000
+  - - 3500, 0, -3500
     - Phobos
     - PhobosNewMoon
     - ''
   Allow: []
   Deny: []
-#===================================================
-#  Asteroidenguertel
-- Coordinates:
-  - -209
-  - 21
-  - 334
-  Color: 1, 0.5, 0
+
+
+#=====================================================
+#  AsteroidGuertelField   12 AsteroidenFelder
+#=====================================================
+#---  AsteroidenFelder 1  ----
+- Coordinates: [-5, -1, 5]
+  Color: 0.37, 0.33, 0.04
   Icon: Star
-  OrbitLine: true
-  Playfields:
-  - - 0, 0, 0
-    - Asteroid Trading
-    - AGSpaceTradingStation
-    - ''
-  Allow: []
+  OrbitLine: False
   Deny: []
-#===================================================
-#  Asteroidenguertel
-- Coordinates:
-  - -171
-  - -45
-  - -270
-  Color: 0.5, 0.5, 0.5
-  Icon: Kite
   Playfields:
-  - - 0, 0, 0
-    - Asteroid Outpost
-    - AGSpaceAlienStation
-    - ''
-  Allow: []
-  Deny: []
-#===================================================
-#  Asteroid Pallas, Minimond mit Asteroidenguertel
-- Coordinates:
-  - -309
-  - -24
-  - -64
-  Color: 0.3, 0.06, 0.04
-  Icon: Circle
-  OrbitLine: true
-  Playfields:
-  - - 0, 0, 0
-    - Asteroid Pallas
-    - AGSpaceAsteroidFieldRing
-    - ''
-  - - 0, 0, 0
-    - Pallas
-    - PallasNewMoon1
-    - ''
-  Allow: []
-  Deny: []
-#===================================================
-#  Asteroid Ceres , Minimond , Asteroidenhaufen
-- Coordinates:
-  - 57
-  - -65
-  - -355
-  Color: 0.3, 0.06, 0.04
-  Icon: Circle
-  OrbitLine: true
-  Playfields:
-  - - 0, 0, 0
-    - Asteroid Ceres
-    - AGSpaceAsteroidFieldRing
-    - ''
-  - - 0, 0, 0
-    - Ceres
-    - CeresNewMoon1
-    - ''
-  Allow: []
-  Deny: []
-#===================================================
-#  Asteroidenguertel
-- Coordinates:
-  - -317
-  - 16
-  - 152
-  Color: 0.5, 0.5, 0.5
-  Icon: Rhombus
-  OrbitLine: true
-  Playfields:
-  - - 0, 0, 0
-    - Asteroid Field
-    - AGSpaceAsteroidField
-    - ''
-  Allow: []
-  Deny: []
-#===================================================
-#  Jupiter , Planet no CV, SV
-#          , dichtegiftige Atmosphaere
-#          , 2.5 g
-#  3 Monde
-- Coordinates:
-  - -708
-  - 211
-  - 41
-  Color: 0.15, 0.3, 0.04
-  Icon: Circle
-  OrbitLine: true
-  Playfields:
-  - - 0, 0, 0
-    - Jupiter Orbit
-    - JupiterSpaceEmpty
-    - ''
-  - - 0, 0, 0
-    - Jupiter
-    - JupiterMoon
-    - ''
-  - - -7000, 0, 1000
-    - Io
-    - IONewAlien
-    - ''
-  - - 6000, -4000, 7000
-    - Ganimed
-    - GanimedNewMoon2
-    - ''
-  - - 2000, 4000, -7000
-    - Europa
-    - EuropaSnow
-    - ''
-  Allow: []
-  Deny: []
-#===================================================
-#  Saturn no CV,SV, dichtegiftige Atmosphaere, 1.5g
-#  1 Mond
-- Coordinates:
-  - -533
-  - 133
-  - 169
-  Color: 0.7, 0.7, 0.7
-  Icon: Circle
-  OrbitLine: true
-  Playfields:
-  - - 0, 0, 0
-    - Saturn Orbit
-    - SaturnSpaceRing
-    - ''
-  - - 0, 0, 0 
-    - Saturn
-    - SaturnMoon
-    - ''
-  - - 5000, 5000, -500 
-    - Titan
-    - TitanNewSnow
-    - ''
-  - - 5000, 500, 5000 
-    - Rhea
-    - RhaeMoon
-    - ''
-  Allow: []
-  Deny: []
-#===================================================
-#  Uranus
-- Coordinates:
-  - -909
-  - 257
-  - -98
+  - ['0, 0, 0', AsteroidGuertel1 , AsteroidGuertelField]
+#---  AsteroidenFelder 2  ----
+- Coordinates: [-2, 1, 8]
   Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: true
-  Playfields:
-  - - 0, 0, 0
-    - Uranus Orbit
-    - UranusSpaceAsteroidsFew
-    - ''
-  - - 0, 0, 0
-    - Uranus
-    - UranusNewDesert2
-    - ''
-  Allow: []
+  Icon: Star
+  OrbitLine: False
   Deny: []
-#===================================================
-#  Neptun , Desert, no O2, 1.2 g
-- Coordinates:
-  - -988
-  - 309
-  - -329
+  Playfields:
+  - ['0, 0, 0', AsteroidGuerte2, AsteroidGuertelField]
+#---  AsteroidenFelder 3  ----
+- Coordinates: [3, 0, 6]
   Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  Playfields:
-  - - 0, 0, 0
-    - Neptun Orbit
-    - NeptunSpaceEmpty
-    - ''
-  - - 0, 0, 0
-    - Neptun
-    - NeptunDesert3
-    - ''
-  - - 6000, -4000, 7000
-    - Triton
-    - NewMoon2
-    - ''
-  - - 6000, 4000, -7000
-    - Nereid
-    - NewMoon2
-    - ''
-  Allow: [Wega 1 Orbit]
+  Icon: Star
+  OrbitLine: False
   Deny: []
-#===================================================
-#  Wega 1  kleiner Temperate, O2, 0.6 g
-- Coordinates:
-  - -944
-  - -756
-  - -856
+  Playfields:
+  - ['0, 0, 0', AsteroidGuertel3, AsteroidGuertelField]
+#---  AsteroidenFelder 4  ----
+- Coordinates: [8, 0, 7]
   Color: 0.37, 0.33, 0.04
-  Icon: Circle
-  OrbitLine: true
-  Playfields:
-  - - 0, 0, 0
-    - Wega 1 Orbit
-    - Weag1SpaceAsteroidFieldRing
-    - ''
-  - - 0, 0, 0
-    - Wega 1
-    - Wega1NewTemperate3
-    - Alien:1
-  - - -2000, -5000, 9000
-    - Wega 1 Moon
-    - Wega1NewMoon
-    - ''
-  Allow: [Neptun Orbit]
+  Icon: Star
+  OrbitLine: False
   Deny: []
-#===================================================
-#  Wega 2
-- Coordinates:
-  - -808
-  - -774
-  - -845
-  Color: 0.04, 0.3, 0.37
-  Icon: Circle
-  OrbitLine: true
   Playfields:
-  - - 0, 0, 0
-    - Wega 2 Orbit
-    - Wega2SpaceAsteroids
-    - ''
-  - - 0, 0, 0
-    - Wega 2
-    - Wega2NewDesert
-    - ''
-  - - -2000, -5000, 9000
-    - Wega 2 Moon
-    - Wega2NewMoon
-    - ''
-  Allow: []
+  - ['0, 0, 0', AsteroidGuertel4, AsteroidGuertelField]
+#---  AsteroidenFelder 5  ----
+- Coordinates: [8, -1, 1]
+  Color: 0.37, 0.33, 0.04
+  Icon: Star
+  OrbitLine: False
   Deny: []
+  Playfields:
+  - ['0, 0, 0', AsteroidGuertel5, AsteroidGuertelField]
+#---  AsteroidenFelder 6  ----
+- Coordinates: [7, 0, -8]
+  Color: 0.37, 0.33, 0.04
+  Icon: Star
+  OrbitLine: False
+  Deny: [Masperon Orbit]
+  Playfields:
+  - ['0, 0, 0', AsteroidGuertel6, AsteroidGuertelField]
+#---  AsteroidenFelder 7  ----
+- Coordinates: [3, -1, -10]
+  Color: 0.37, 0.33, 0.04
+  Icon: Star
+  OrbitLine: False
+  Deny: [Masperon Orbit]
+  Playfields:
+  - ['0, 0, 0', AsteroidGuertel7, AsteroidGuertelField]
+#---  AsteroidenFelder 8  ----
+- Coordinates: [2, 0, 5]
+  Color: 0.37, 0.33, 0.04
+  Icon: Star
+  OrbitLine: False
+  Deny: []
+  Playfields:
+  - ['0, 0, 0', AsteroidGuertel8, AsteroidGuertelField]
+#---  AsteroidenFelder 9  ----
+- Coordinates: [-5, 1, -10]
+  Color: 0.37, 0.33, 0.04
+  Icon: Star
+  OrbitLine: False
+  Deny: []
+  Playfields:
+  - ['0, 0, 0', AsteroidGuertel9, AsteroidGuertelField]
+#---  AsteroidenFelder 10  ----
+- Coordinates: [-7, 0, -5]
+  Color: 0.37, 0.33, 0.04
+  Icon: Star
+  OrbitLine: False
+  Deny: []
+  Playfields:
+  - ['0, 0, 0', AsteroidGuertel10, AsteroidGuertelField]
+#---  AsteroidenFelder 11  ----
+- Coordinates: [-6, -1, -1]
+  Color: 0.37, 0.33, 0.04
+  Icon: Star
+  OrbitLine: False
+  Deny: []
+  Playfields:
+  - ['0, 0, 0', AsteroidGuertel11, AsteroidGuertelField]
+#---  AsteroidenFelder 12  ----
+- Coordinates: [-10, 0, 1]
+  Color: 0.37, 0.33, 0.04
+  Icon: Star
+  OrbitLine: False
+  Deny: []
+  Playfields:
+  - ['0, 0, 0', AsteroidGuertel12, AsteroidGuertelField]
+#============================================================
+#---  Jupiter  ----
+- Coordinates: [21, -1, -20]
+  Color: 0.37, 0.33, 0.04
+  Icon: Star
+  OrbitLine: True
+  Deny: []
+  Playfields:
+  - ['0, 0, 0', Jupiter Orbit, JupiterSpaceEmpty]
+  - ['0, 0, 0', Jupiter, JupiterPlanet]
+  - ['6640, 0, 0', Europa, JupiterEuropa]
+#---  Saturn  ----
+- Coordinates: [-9, 1, 12]
+  Color: 0.37, 0.33, 0.04
+  Icon: Star
+  OrbitLine: True
+  Deny: []
+  Playfields:
+  - ['0, 0, 0', Saturn Orbit, SaturnSpaceEmpty]
+#---  Uranus  ----
+- Coordinates: [42, 0, 11]
+  Color: 0.37, 0.33, 0.04
+  Icon: Star
+  OrbitLine: True
+  Deny: []
+  Playfields:
+  - ['0, 0, 0', Uranus Orbit, UranusSpaceEmpty]
